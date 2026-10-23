@@ -1,0 +1,108 @@
+{
+    "serial": {
+        "port": "auto",
+        "baud_rate": 9600
+    },
+    "sensors": {
+        "rain_active_low": true
+    },
+    "thresholds": {
+        "temp_deviation": 5.0,
+        "light_deviation_percent": 50.0,
+        "vibration_multiplier": 5.0,
+        "min_calibration_samples": 50
+    },
+    "calibration": {
+        "TEMP": {
+            "mean": 29.193103448275863,
+            "min": 29.0,
+            "max": 29.3,
+            "std": 0.08348141712647558
+        },
+        "HUM": {
+            "mean": 44.206896551724135,
+            "min": 42.0,
+            "max": 49.0,
+            "std": 2.2999513396046676
+        },
+        "LIGHT": {
+            "mean": 446.08620689655174,
+            "min": 429.0,
+            "max": 463.0,
+            "std": 9.555533866049283
+        },
+        "AX": {
+            "mean": 354.5344827586207,
+            "min": 354.0,
+            "max": 355.0,
+            "std": 0.5031660198753178
+        },
+        "AY": {
+            "mean": 332.2068965517241,
+            "min": 332.0,
+            "max": 333.0,
+            "std": 0.40861858377396965
+        },
+        "AZ": {
+            "mean": 397.17241379310343,
+            "min": 396.0,
+            "max": 398.0,
+            "std": 0.4245919004310795
+        },
+        "VIBRATION": {
+            "mean": 0.7331267560127976,
+            "min": 0.5378094469131639,
+            "max": 1.2783061399351505,
+            "std": 0.2313422765683941
+        },
+        "timestamp": "2026-09-17T09:27:40.867946"
+    },
+    "camera": {
+        "source": "mac",
+        "index": 0,
+        "device_index": 0,
+        "width": 1280,
+        "height": 720,
+        "target_fps": 30,
+        "display": true,
+        "recording_enabled": false
+    },
+    "detector": {
+        "model_path": "models/drone_yolov8n.pt",
+        "target_class": "quadcopter",
+        "confidence_threshold": 0.4,
+        "device": "cpu"
+    },
+    "tracker": {
+        "association_iou_threshold": 0.3,
+        "max_center_distance_ratio": 0.3,
+        "max_missed_frames": 10,
+        "min_detection_confidence": 0.4,
+        "trajectory_length": 30,
+        "target_selection_policy": "highest_confidence"
+    },
+    "fusion": {
+        "max_timestamp_delta_ms": 500
+    },
+    "experiment": {
+        "stabilization_seconds": 3.0,
+        "recording_seconds": 10.0,
+        "minimum_tracking_frames": 10
+    },
+    "analysis": {
+        "minimum_correlation_trials": 5
+    },
+    "adaptive_tracking": {
+        "enabled": true,
+        "minimum_improvement": 10.0,
+        "validation_window": 30,
+        "max_adaptation_attempts": 3,
+        "cooldown_frames": 100,
+        "degradation_jitter_threshold": 5.0,
+        "degradation_lost_threshold": 3,
+        "evidence_thresholds": {
+            "min_independent_trials": 2,
+            "require_correlation": true
+        }
+    }
+}

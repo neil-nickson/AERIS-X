@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# OS Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Virtual Environments & Secrets
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / Editor Artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime Logs, Experiments & Scratch data (preserves directory structure via .gitkeep)
+logs/*
+!logs/.gitkeep
+experiments/*
+!experiments/.gitkeep
+scratch/*
+!scratch/.gitkeep
+
+# Keep repository models tracked
+!models/drone_yolov8n.pt
